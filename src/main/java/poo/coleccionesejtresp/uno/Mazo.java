@@ -103,8 +103,4 @@ public class Mazo {
         //Remplazo la baraja ordenada por la barajada
         baraja = mazoAuxiliar;        
     }
-    
-    
-    
-    
 }

@@ -13,7 +13,7 @@ public class Principal {
         mazo.imprimirTodos();
         
         System.out.println("");
-        System.out.println("CARYAS BARAJADAS");
+        System.out.println("CARTAS BARAJADAS");
         System.out.println("");
         
         mazo.barajar();
