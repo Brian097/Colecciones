@@ -1,2 +1,2 @@
 # Colecciones
-Catas- BlackJack
+Cartas- BlackJack
