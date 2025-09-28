@@ -6,11 +6,17 @@ public class Principal {
         
         mazo.crear();
         
-//        mazo.imprimirTodos();
+        System.out.println("");                
+        System.out.println("CARTAS SIN BARAJAR");
+        System.out.println("");
         
-//        Mazo mazoFiltrado = mazo.sacar8y9(mazo);
-
+        mazo.imprimirTodos();
         
+        System.out.println("");
+        System.out.println("CARYAS BARAJADAS");
+        System.out.println("");
+        
+        mazo.barajar();
         mazo.imprimirTodos();
  
         

@@ -6,18 +6,7 @@ public class BlackJack extends Mazo {
         super();
     }
     
-    //METODO PARAS SACAR LAS CARTAS 8 Y 9 DEL MAZO (SE VA A JUGAR CON 40 CARTAS)
-    private void sacar8y9() {
-        for (int i = cantidad() -1 ; i >= 0; i--) {
-            Carta carta = devolver(i); 
-            if ((carta.getNumero() == 8) || (carta.getNumero() == 9)) {
-                eliminar(carta);
-                        
-            } else if (carta.getNumero() == 10 || carta.getNumero() == 11 || carta.getNumero() == 12) {
-                System.out.println(carta.getNumero());
-            }
-        }e
-    }
+    
 
     //REESCRITURA DEL METODO CREAR, CREO UN MAZO PERO CON OTROS PALOS
     @Override
@@ -30,8 +19,43 @@ public class BlackJack extends Mazo {
                 insertar(nuevaCarta); //Metodo heredado
             }
         }
-        sacar8y9();
+        modificarMazo();
     }
     
-    
+    /*
+     * METODOS PARA MOLDEAR EL MAZO 
+     */
+    //METODO PARA MODIFICAR EL MAZO A UN MAZO INGLES DE 40 CARTAS
+    public void modificarMazo() {
+        for (int i = cantidad() -1; i >= 0; i--) {
+            Carta carta = devolver(i);
+            int numero = carta.getNumero();
+            
+            switch (numero){
+                case 1:
+                    carta.setPalo("As");
+                    break;
+                case 8:
+                    eliminar(carta);
+                    break;
+                case 9:
+                    eliminar(carta);
+                    break;
+                case 10:
+                    carta.setPalo("J");
+                    carta.setNumero(10);
+                    break;
+                case 11:
+                    carta.setPalo("Q");
+                    carta.setNumero(10);
+                    break;
+                case 12:
+                    carta.setPalo("K");
+                    carta.setNumero(10);
+                    break;
+                    
+            }
+            
+        }
+    }
 }
